@@ -1,7 +1,15 @@
 package com.clx.vpcdemo.dto;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
+import com.fasterxml.jackson.annotation.JsonRootName;
+
+@JsonRootName(value = "ec2-info")
 public class Ec2InfoDTO {
+
+    @JsonProperty("region_name")
     private String regionName;
+
+    @JsonProperty("availability_zone")
     private String availabilityZone;
 
     public String getRegionName() {
